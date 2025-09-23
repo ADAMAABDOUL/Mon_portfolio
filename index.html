@@ -466,7 +466,12 @@
         </div>
       </div>
     </div>
+<!--teste-->
+      <div id="successMessage" style="display:none; color:green; margin-bottom:10px;">
+  ✅ Message envoyé !
+</div>
 
+      <!--teste-->
     <!-- Formulaire fonctionnel -->
     <div class="row">
       <div class="contact-form reveal">
@@ -483,7 +488,7 @@
           </div>
 
           <!-- Redirection après envoi -->
-          <input type="hidden" name="_next" value="https://adamaabdoul.github.io/Adama/#contact">
+          <input type="hidden" name="_next" value="https://adamaabdoul.github.io/Mon_portfolio/#contact?success=true">
 
           <!-- Protection anti-spam -->
           <input type="hidden" name="_captcha" value="false">
@@ -547,9 +552,18 @@
 
 
     </script>
+    <script>
+  const params = new URLSearchParams(window.location.search);
+  if(params.get('success') === 'true'){
+    const msg = document.getElementById('successMessage');
+    if(msg) msg.style.display = 'block';
+  }
+</script>
+
 </body>
 
 </html>
+
 
 
 
