@@ -329,7 +329,7 @@
         <!-- Exemple graphique + code collapsible -->
         <div class="card" data-aos="fade-up" data-aos-delay="300">
             <h3>Prix de clôture Bitcoin</h3>
-            <iframe src="close_btc.html" width="100%" height="500px" style="border:none;"></iframe>
+            <iframe src="close_btc.png" width="100%" height="500px" style="border:none;"></iframe>
             <button class="toggle-code">Voir le code Python</button>
             <div class="code-block" style="display:none;">
 <pre><code>import plotly.express as px
@@ -353,7 +353,7 @@ fig.show()
 
         <div class="card" data-aos="fade-up" data-aos-delay="500">
             <h3>Volatilité Bitcoin (30 jours)</h3>
-            <iframe src="volatility_btc.html" width="100%" height="500px" style="border:none;"></iframe>
+            <iframe src="volatility_btc.png" width="100%" height="500px" style="border:none;"></iframe>
             <button class="toggle-code">Voir le code Python</button>
             <div class="code-block" style="display:none;">
 <pre><code>data_btc_eth['Volatility_btc'] = data_btc_eth['Return_btc'].rolling(window=7).std()
@@ -363,17 +363,23 @@ fig.show()
             </div>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="600">
+                <div class="card" data-aos="fade-up" data-aos-delay="600">
             <h3>Comparaison BTC vs ETH</h3>
-            <iframe src="compare_btc_eth.html" width="100%" height="500px" style="border:none;"></iframe>
+        
+            <!-- Image cliquable vers le HTML interactif -->
+            <a href="compare_btc_eth.html" target="_blank">
+                <img src="compare_btc_eth.png" alt="Comparaison BTC vs ETH" class="project-img">
+            </a>
+        
             <button class="toggle-code">Voir le code Python</button>
             <div class="code-block" style="display:none;">
-<pre><code>data_norm = data_btc_eth[['Close_btc','Close_eth']]/data_btc_eth[['Close_btc','Close_eth']].iloc[0]
-fig = px.line(data_norm, x=data_btc_eth.index, y=['Close_btc','Close_eth'], title="BTC vs ETH")
-fig.show()
-</code></pre>
+        <pre><code>data_norm = data_btc_eth[['Close_btc','Close_eth']]/data_btc_eth[['Close_btc','Close_eth']].iloc[0]
+        fig = px.line(data_norm, x=data_btc_eth.index, y=['Close_btc','Close_eth'], title="BTC vs ETH")
+        fig.show()
+        </code></pre>
             </div>
         </div>
+
 
     </div>
 
@@ -635,6 +641,7 @@ document.querySelectorAll('.toggle-code').forEach(btn => {
 </body>
 
 </html>
+
 
 
 
