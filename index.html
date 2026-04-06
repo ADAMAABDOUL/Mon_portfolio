@@ -1,679 +1,749 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ35QLR16G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PJ35QLR16G');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Adama</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ35QLR16G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PJ35QLR16G');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adama BA – Data Analyst | Python, SQL, Power BI, Machine Learning">
+  <title>Adama BA – Data Analyst</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<!-- opt-->
- <!-- Fond animé -->
-<!--<canvas id="background"></canvas>
-
-<script>
-  const canvas = document.getElementById("background");
-  const ctx = canvas.getContext("2d");
-
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  let particles = [];
-
-  // Création des particules
-  for (let i = 0; i < 80; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      radius: Math.random() * 2,
-      dx: (Math.random() - 0.5) * 0.5,
-      dy: (Math.random() - 0.5) * 0.5
-    });
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#0ff";
-
-    particles.forEach(p => {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Mise à jour position
-      p.x += p.dx;
-      p.y += p.dy;
-
-      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
-    });
-
-    requestAnimationFrame(draw);
-  }
-
-  draw();
-
-  // Ajuste quand on redimensionne la fenêtre
-  window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
-</script>-->
-
- <!-- opt-->
 <body>
 
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#accueil" class="logo">Adama<span>.</span></a>
 
-    <header>
-        <!-- <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000">Adama</a>-->
-        <div class="menu-btn"></div>
-        <div class="navigation">
-        <a href="#accueil" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Accueil</a>
-        <a href="#apropos" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">À propos</a>
-        <a href="#services" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Projets</a>
-        <a href="#experience" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Expériences</a>
-        <a href="#competences" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Compétences</a>
-        <!--<a href="#servicess" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Ce que je maîtrise</a> -->
-        <a href="#contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Contact</a>
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navigation" role="navigation">
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#services">Projets</a>
+        <a href="#experience">Expériences</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
     </div>
-    </header>
+  </header>
 
-    <section class="accueil" id="accueil">
-        <div class="content">
-            <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800"> <br><span> Hello, je suis Adama </span></h2>
-            <div class="animated-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
-              <h3>Data Analyst</h3>
-                <h3>Python • SQL • Power BI</h3>
-                <h3>Machine Learning</h3>
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-aos="fade-up" data-aos-duration="700">Bonjour, je suis</p>
+      <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+        Adama BA
+      </h1>
+      <h2 class="hero-role" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+        Data Analyst
+      </h2>
+      <p class="hero-tagline" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+        Transformer la donnée en décisions concrètes
+      </p>
+      <p class="hero-stack" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+        Python &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; Machine Learning
+      </p>
+
+      <div class="hero-actions" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+        <a href="#contact" class="btn btn-primary">Me contacter</a>
+        <a href="cv_ba_adama.pdf" target="_blank" class="btn btn-outline">
+          <i class="fas fa-file-alt"></i> Voir mon CV
+        </a>
+      </div>
+
+      <div class="hero-social" data-aos="fade-up" data-aos-duration="700" data-aos-delay="600">
+        <a href="https://www.linkedin.com/in/adama-abdoul-ba-a292321b0" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" data-aos="fade-up" data-aos-delay="800">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       À PROPOS
+  ══════════════════════════════════════ -->
+  <section class="about" id="apropos">
+    <div class="section-inner">
+      <div class="about-grid">
+
+        <!-- Photo -->
+        <div class="about-photo" data-aos="fade-right" data-aos-duration="900">
+          <div class="photo-frame">
+            <img src="img1.jfif" alt="Adama BA – Data Analyst">
+          </div>
+          <!-- Stats rapides -->
+          <div class="about-stats">
+            <div class="stat">
+              <strong>2+</strong>
+              <span>ans d'expérience</span>
             </div>
-            <a href="cv_ba_adama.pdf" target="_blank" class="btn" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1000">
-    Voir mon CV
-</a>
-            <div class="media-icons">
-                        <a href="https://www.linkedin.com/in/adama-abdoul-ba-a292321b0" target="_blank" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1200">
-                <i class="fab fa-linkedin-in"></i>
+            <div class="stat">
+              <strong>10+</strong>
+              <span>projets réalisés</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texte -->
+        <div class="about-text" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+          <p class="section-label">À propos</p>
+          <h2>Data Analyst avec une approche orientée impact métier</h2>
+          <p>
+            Je conçois des solutions data qui font gagner du temps, améliorent les décisions et automatisent les tâches répétitives. 
+            Mon parcours mêle modélisation prédictive, ETL et data visualisation, toujours au service des équipes terrain.
+          </p>
+          <p>
+            Passionné par le Machine Learning et les outils BI, j'ai travaillé chez Orange sur des projets d'automatisation 
+            et de catégorisation de flux traitement plus de 350 demandes par mois. Je cherche à rejoindre une équipe data 
+            pour continuer à créer de la valeur à partir de la donnée.
+          </p>
+
+          <div class="about-tags">
+            <span>Python</span><span>SQL</span><span>Power BI</span>
+            <span>Scikit-learn</span><span>Snowflake</span><span>Looker Studio</span>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">Me contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DOMAINES D'EXPERTISE
+  ══════════════════════════════════════ -->
+  <section class="expertise" id="servicess">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Ce que je fais</p>
+        <h2>Domaines d'expertise</h2>
+      </div>
+
+      <div class="expertise-grid">
+        <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="expertise-icon"><i class="fas fa-database"></i></div>
+          <h3>Analyse & ETL</h3>
+          <p>Extraction, nettoyage et transformation de données massives avec Python, SQL, Talend et Snowflake. Automatisation des workflows pour libérer du temps aux équipes métier.</p>
+        </div>
+        <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="expertise-icon"><i class="fas fa-robot"></i></div>
+          <h3>Machine Learning & IA</h3>
+          <p>Modèles prédictifs (XGBoost, Random Forest, CNN, NLP, Word2Vec) pour automatiser et améliorer la prise de décision à l'échelle.</p>
+        </div>
+        <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="expertise-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Data Visualisation</h3>
+          <p>Dashboards interactifs sur Power BI, Looker Studio et Plotly. Des KPIs clairs pour que chaque équipe puisse piloter son activité.</p>
+        </div>
+        <div class="expertise-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="expertise-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Statistique & Modélisation</h3>
+          <p>ACP, ACM, régressions, tests d'inférence — pour analyser les phénomènes complexes et valider les hypothèses métier avec rigueur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROJETS
+  ══════════════════════════════════════ -->
+  <section class="projects" id="services">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Réalisations</p>
+        <h2>Projets marquants</h2>
+        <p class="section-desc">Des projets concrets alliant Data Engineering, Machine Learning et visualisation métier.</p>
+      </div>
+
+      <!-- Grille principale -->
+      <div class="projects-grid">
+
+        <!-- Projet Saturnisme -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img-wrap">
+            <img src="Saturnisme.png" alt="Répartition Saturnisme France">
+            <div class="project-overlay">
+              <a href="Saturnisme.pdf" target="_blank" class="overlay-btn">Voir le dashboard →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>API Python</span><span>Snowflake</span><span>Looker Studio</span></div>
+            <h3>Répartition du saturnisme en France</h3>
+            <p>Pipeline complet : récupération via API santé → stockage Snowflake → dashboard Looker Studio.</p>
+            <p class="project-result">→ Suivi régional de 1995 à aujourd'hui, 100% automatisé</p>
+          </div>
+        </div>
+
+        <!-- Projet Ventes Power BI -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img-wrap">
+            <img src="boutique.png" alt="Analyse ventes Power BI">
+            <div class="project-overlay">
+              <a href="sales_pb.pdf" target="_blank" class="overlay-btn">Voir le dashboard →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Power BI</span><span>KPIs</span><span>Commerce</span></div>
+            <h3>Analyse des ventes</h3>
+            <p>Dashboard interactif par produit, boutique et période pour piloter les décisions commerciales.</p>
+            <p class="project-result">→ Vision 360° des performances en temps réel</p>
+          </div>
+        </div>
+
+        <!-- Projet Covid -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-img-wrap">
+            <img src="covid.jpg" alt="Visualisation Covid">
+            <div class="project-overlay">
+              <a href="covid_bar_chart_race.mp4" target="_blank" class="overlay-btn">Voir la vidéo →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Python</span><span>Plotly</span><span>Storytelling</span></div>
+            <h3>Visualisation dynamique Covid-19</h3>
+            <p>Bar chart race animé combinant data engineering et narration visuelle pour rendre les données vivantes.</p>
+            <p class="project-result">→ Évolution mondiale des cas, rendu cinématique</p>
+          </div>
+        </div>
+
+        <!-- Projet Portfolio Analytics -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img-wrap">
+            <img src="portfolio.png" alt="Analyse tendances portfolio">
+            <div class="project-overlay">
+              <a href="Portfolio.pdf" target="_blank" class="overlay-btn">Voir le dashboard →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Google Analytics</span><span>Looker Studio</span><span>Automatisation</span></div>
+            <h3>Analytics de mon portfolio</h3>
+            <p>Récupération des données GA, visualisations automatisées pour suivre trafic, pages et comportements.</p>
+            <p class="project-result">→ Pilotage du portfolio comme un produit</p>
+          </div>
+        </div>
+
+        <!-- Projet Fraude -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img-wrap">
+            <img src="fraude.webp" alt="Détection fraude">
+            <div class="project-overlay">
+              <span class="overlay-tag">Machine Learning</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>XGBoost</span><span>Classification</span><span>Fintech</span></div>
+            <h3>Détection de transactions frauduleuses</h3>
+            <p>Comparaison régression logistique vs XGBoost pour identifier les transactions suspectes.</p>
+            <p class="project-result">→ Réduction des pertes financières potentielles</p>
+          </div>
+        </div>
+
+        <!-- Projet Candidatures -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-img-wrap">
+            <img src="candidatures_dashboard.png" alt="Suivi candidatures">
+            <div class="project-overlay">
+              <span class="overlay-tag">Excel / Automatisation</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Excel</span><span>Automatisation</span><span>Reporting</span></div>
+            <h3>Suivi automatisé des candidatures</h3>
+            <p>Tableau Excel avec indicateurs automatiques pour identifier les candidatures à relancer.</p>
+            <p class="project-result">→ Zéro candidature oubliée, relances ciblées</p>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+
+      <!-- ── Sous-section Crypto ────────────────────── -->
+      <div class="subsection-header" data-aos="fade-up">
+        <p class="section-label">Analyse financière</p>
+        <h2>Bitcoin &amp; Ethereum</h2>
+        <p class="section-desc">Visualisations interactives réalisées avec Python, Pandas et Plotly.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- BTC Close -->
+        <div class="project-card crypto-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img-wrap">
+            <a href="close_btc.html" target="_blank">
+              <img src="close_btc.png" alt="Prix de clôture BTC">
+              <div class="project-overlay"><span class="overlay-btn">Voir interactif →</span></div>
             </a>
-            <!--<a href="https://github.com/ton-profil" target="_blank" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1300">
-                <i class="fab fa-github"></i>
-            </a>-->
-            </div>
-        </div>
-    </section>
-
-<!--  About Section -->
-
-    <section class="about" id="apropos">
-    <div class="title reveal">
-        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">À propos de moi</h2>
-    </div>
-    <div class="content">
-        <!-- Colonne gauche : photo -->
-        <div class="column col-left reveal">
-            <div class="img-card" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
-                <img src="img1.jfif" alt="Photo de profil">
-            </div>
-        </div>
-
-        <!-- Colonne droite : texte -->
-        <div class="column col-right reveal">
-            <h2 class="content-title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                Bonjour ! Je suis Adama 
-            </h2>
-<p class="paragraph-text">
-Data Analyst avec une forte appétence pour le Machine Learning, je conçois des solutions data utiles aux équipes métier.
-
-J’ai travaillé sur des projets d’automatisation, de modélisation prédictive et de data visualisation (Python, SQL, Power BI).
-
-Je m’intéresse particulièrement à l’impact opérationnel : gagner du temps, améliorer les décisions et automatiser les tâches.
-
-Curieux et rigoureux, je cherche à rejoindre une équipe data pour continuer à progresser.
-</p>
-            <a href="#contact" class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="600">Me contacter</a>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-<!-- Expertise Section -->
-<section class="servicess" id="servicess">
-    <div class="title">
-        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Domaines d'expertise</h2>
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            Voici quelques-unes des compétences et réalisations clés que j'apporte en tant que Data Scientist.
-        </p>
-    </div>
-    <div class="content">
-        <div class="card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-            <div class="service-icon">
-                <i class="fas fa-database"></i>
-            </div>
-            <div class="info">
-                <h3>Analyse de données & ETL</h3>
-                <p>Automatisation de processus, extraction et nettoyage de données massives avec Python, SQL et Talend,Snowflake 
-                   optimisation des workflows pour gagner du temps aux équipes métiers.</p>
-            </div>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-            <div class="service-icon">
-                <i class="fas fa-robot"></i>
-            </div>
-            <div class="info">
-                <h3>Machine Learning & IA</h3>
-                <p>Conception et implémentation de modèles prédictifs (XGBoost, Random Forest, Word2Vec, CNN, NLP) 
-                   pour automatiser et améliorer la prise de décision.</p>
-            </div>
-        </div>
-        <div class="card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-            <div class="service-icon">
-
-                <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="info">
-                <h3>Data Visualisation & Reporting</h3>
-                <p>Création de dashboards interactifs et visuels (Power BI, Excel, Seaborn, Matplotlib) 
-                   pour aider les équipes à interpréter et exploiter les données efficacement.</p>
-            </div>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-            <div class="service-icon">
-                <i class="fas fa-chart-pie"></i>
-            </div>
-            <div class="info">
-                <h3>Statistique & Modélisation</h3>
-                <p>Application de méthodes statistiques avancées (ACP, ACM, régression, tests d’inférence) pour 
-                   analyser, comprendre et modéliser des phénomènes complexes dans les données.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-<!-- Work Section -->
-    <!-- Expertise Section / Projets avec images -->
-<section class="services" id="services">
-    <div class="title">
-        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Projets marquants</h2>
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            Quelques-uns des projets sur lesquels j'ai travaillé, illustrant mes compétences en Data Science, Machine Learning et Data Visualization.
-        </p>
-    </div>
-    <div class="content">
-              <!-- Projet 6 : Saturnisme France -->
-        <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
-            <img src="Saturnisme.png" alt="Répartition Saturnisme France" class="project-img">
-            <div class="info">
-                <h3>Répartition du saturnisme en France</h3>
-                <p>Récupération des données santé via API à travers python, stockage et traitement dans Snowflake, puis visualisation dynamique sur Looker Studio  pour suivre la répartition par région et l’évolution depuis 1995.</p>
-                <a href="Saturnisme.pdf" target="_blank" class="btn btn-primary btn-sm mt-2">Voir le dashboard</a>
-            </div>
-        </div>
-        <!-- Projet 5 -->
-        <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-            <img src="boutique.png" alt="Analyse ventes Power BI" class="project-img">
-           <!-- <div class="service-icon">
-                <i class="fas fa-chart-pie"></i>
-            </div> -->
-            <div class="info">
-                <h3>Analyse des ventes (Power BI)</h3>
-                <p>Dashboard interactif pour analyser les ventes par produit, boutique et période. 
-                   Fournit des KPIs clairs pour orienter les décisions commerciales ou marketing.</p>
-                   <a href="sales_pb.pdf" target="_blank" class="btn btn-primary btn-sm mt-2">
-            Voir le dashboard
-        </a>
-            </div>
-        </div>
-        
-        <!-- Projet 4 -->
-        <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-            <img src="covid.jpg" alt="Visualisation Covid" class="project-img">
-           <!-- <div class="service-icon">
-                <i class="fas fa-globe"></i>
-            </div>-->
-            <div class="info">
-                <h3>Visualisations dynamiques & storytelling</h3>
-                <p>Création de graphique animé avec python pour suivre l’évolution des cas Covid-19, 
-                   combinant data engineering et narration visuelle pour rendre les données vivantes.</p>
-                   <a href="covid_bar_chart_race.mp4" target="_blank" class="btn btn-primary btn-sm mt-2">
-            Voir la vidéo
-        </a>
-            </div>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-            <img src="portfolio.png" alt="Tendances site web" class="project-img">
-            <div class="info">
-                <h3>Analyse des tendances de mon portfolio</h3>
-                <p>Récupération des données Google Analytics, création de visualisations automatisées sur Looker Studio pour suivre le trafic, les pages les plus consultées et les comportements des utilisateurs.</p>
-                <a href="Portfolio.pdf" target="_blank" class="btn btn-primary btn-sm mt-2">Voir le dashboard</a>
-            </div>
-        </div>
-        <!-- Projet 1 -->
-        <div class="card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-            <img src="fraude.webp" alt="Détection fraude" class="project-img">
-           <!-- <div class="service-icon">
-                <i class="fas fa-shield-alt"></i>
-            </div>-->
-            <div class="info">
-                <h3>Détection de transactions frauduleuses</h3>
-                <p>Comparaison de modèles de régression logistique et XGBoost pour identifier les transactions suspectes, 
-                   améliorant la sécurité financière et réduisant les pertes potentielles.</p>
-                   <!--<a href="fraude_detection.ipynb" target="_blank" class="btn btn-primary btn-sm mt-2">
-            Voir le notebook
-        </a>-->
-            </div>
-        </div>
-
-
-            
-        <!-- Projet 3 -->
-        <!-- <div class="card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-            <img src="cnn.jpg" alt="Classification CNN" class="project-img">
-           <div class="service-icon">
-                <i class="fas fa-image"></i>
-            </div> 
-            <div class="info">
-                <h3>Classification d'images avec CNN</h3>
-                <p>Développement d’un modèle de deep learning pour classifier des images avec augmentation et normalisation, 
-                   utile pour reconnaissance visuelle et diagnostic automatisé.</p>
-            </div>
-        </div> -->
-
-        
-        
-
-        <!-- Projet : Analyse des tendances du site web -->
-         <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-    <img src="candidatures_dashboard.png" alt="Suivi des candidatures" class="project-img">
-    
-    <div class="info">
-        <h3>Suivi automatisé des candidatures</h3>
-        <p>
-            Création d’un tableau Excel permettant de suivre mes candidatures et de générer automatiquement des indicateurs pour identifier celles à relancer.
-  
-        </p>
-       <!-- <a href="LIEN_VERS_FICHIER_EXCEL_OU_RAPPORT" target="_blank" class="btn btn-primary btn-sm mt-2">
-            Voir le fichier
-        </a>-->
-    </div>
-</div>
-
-       <!-- Section Bitcoin & Ethereum -->
-
-    <div class="title">
-        <h2 class="section-title" data-aos="fade-up">Analyses Bitcoin & Ethereum</h2>
-        <p data-aos="fade-up" data-aos-delay="200">
-            Visualisations interactives réalisées avec <strong>Python, Pandas et Plotly</strong>. 
-            Elles montrent le prix, le rendement, la volatilité du Bitcoin et la comparaison BTC vs ETH. 
-        </p>
-    </div>
-
-    <div class="content">
-
-<!-- Prix de clôture Bitcoin -->
-<div class="card" data-aos="fade-up" data-aos-delay="300">
-    <h3>Prix de clôture Bitcoin</h3>
-
-    <!-- Image cliquable -->
-    <a href="close_btc.html" target="_blank">
-        <img src="close_btc.png" alt="Prix de clôture BTC" class="project-img" style="width:100%; cursor:pointer;">
-    </a>
-
-    <button class="toggle-code">Voir le code Python</button>
-    <div class="code-block" style="display:none;">
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Plotly</span><span>Bitcoin</span></div>
+            <h3>Prix de clôture Bitcoin</h3>
+            <button class="toggle-code">
+              <i class="fas fa-code"></i> Voir le code Python
+            </button>
+            <div class="code-block">
 <pre><code>import plotly.express as px
-fig = px.line(data_btc_eth, x=data_btc_eth.index, y="Close_btc", title="Prix de clôture BTC")
-fig.show()
-</code></pre>
-    </div>
-</div>
+fig = px.line(data_btc_eth,
+              x=data_btc_eth.index,
+              y="Close_btc",
+              title="Prix de clôture BTC")
+fig.show()</code></pre>
+            </div>
+          </div>
+        </div>
 
-<!-- Rendement quotidien Bitcoin -->
-<div class="card" data-aos="fade-up" data-aos-delay="400">
-    <h3>Rendement quotidien Bitcoin</h3>
-
-    <!-- Image cliquable -->
-    <a href="return_btc.html" target="_blank">
-        <img src="return_btc.png" alt="Rendement quotidien BTC" class="project-img" style="width:100%; cursor:pointer;">
-    </a>
-
-    <button class="toggle-code">Voir le code Python</button>
-    <div class="code-block" style="display:none;">
-<pre><code>data_btc_eth['Return_btc'] = data_btc_eth['Close_btc'].pct_change()
-fig = px.line(data_btc_eth, x=data_btc_eth.index, y="Return_btc", title="Rendement quotidien BTC")
-fig.show()
-</code></pre>
-    </div>
-</div>
-
-<!-- Volatilité Bitcoin (30 jours) -->
-<div class="card" data-aos="fade-up" data-aos-delay="500">
-    <h3>Volatilité Bitcoin (30 jours)</h3>
-
-    <!-- Image cliquable -->
-    <a href="volatility_btc.html" target="_blank">
-        <img src="volatility_btc.png" alt="Volatilité BTC" class="project-img" style="width:100%; cursor:pointer;">
-    </a>
-
-    <button class="toggle-code">Voir le code Python</button>
-    <div class="code-block" style="display:none;">
-<pre><code>data_btc_eth['Volatility_btc'] = data_btc_eth['Return_btc'].rolling(window=30).std()
-fig = px.line(data_btc_eth, x=data_btc_eth.index, y="Volatility_btc", title="Volatilité BTC")
-fig.show()
-</code></pre>
-    </div>
-</div>
-
-
-                <div class="card" data-aos="fade-up" data-aos-delay="600">
-            <h3>Comparaison BTC vs ETH</h3>
-        
-            <!-- Image cliquable vers le HTML interactif -->
-            <a href="compare_btc_eth.html" target="_blank">
-                <img src="compare_btc_eth.png" alt="Comparaison BTC vs ETH" class="project-img">
+        <!-- BTC Return -->
+        <div class="project-card crypto-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img-wrap">
+            <a href="return_btc.html" target="_blank">
+              <img src="return_btc.png" alt="Rendement BTC">
+              <div class="project-overlay"><span class="overlay-btn">Voir interactif →</span></div>
             </a>
-        
-            <button class="toggle-code">Voir le code Python</button>
-            <div class="code-block" style="display:none;">
-        <pre><code>data_norm = data_btc_eth[['Close_btc','Close_eth']]/data_btc_eth[['Close_btc','Close_eth']].iloc[0]
-        fig = px.line(data_norm, x=data_btc_eth.index, y=['Close_btc','Close_eth'], title="BTC vs ETH")
-        fig.show()
-        </code></pre>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Plotly</span><span>Finance</span></div>
+            <h3>Rendement quotidien Bitcoin</h3>
+            <button class="toggle-code">
+              <i class="fas fa-code"></i> Voir le code Python
+            </button>
+            <div class="code-block">
+<pre><code>data_btc_eth['Return_btc'] = \
+  data_btc_eth['Close_btc'].pct_change()
+fig = px.line(data_btc_eth,
+              x=data_btc_eth.index,
+              y="Return_btc",
+              title="Rendement quotidien BTC")
+fig.show()</code></pre>
             </div>
+          </div>
         </div>
 
-
-    </div>
-
-
-
-<!-- JS pour afficher/cacher le code -->
-<script>
-document.querySelectorAll('.toggle-code').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const codeBlock = btn.nextElementSibling;
-        codeBlock.style.display = codeBlock.style.display === 'none' ? 'block' : 'none';
-    });
-});
-</script>
-
-
-    </div>
-</section>
- <!-- Experience Section -->
-<section id="experience">
-  <div class="container">
-    <h2>Expérience Professionnelle</h2>
-
-    <div class="timeline">
-      
-      <!-- Orange -->
-      <div class="experience-item">
-        <span class="timeline-point"></span>
-        <img src="Orange.webp" alt="Orange">
-        <h3>Analyste BI | Orange - Toulon</h3>
-        <p class="period">(2023 - 2024)</p>
-
-        <div class="project-card">
-          <h4>Projet 1 : Automatisation fichiers</h4>
-          <p>Automate Python (Selenium, Pandas, Tkinter) pour traiter 130 fichiers et les partager via SharePoint.</p>
+        <!-- BTC Volatility -->
+        <div class="project-card crypto-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-img-wrap">
+            <a href="volatility_btc.html" target="_blank">
+              <img src="volatility_btc.png" alt="Volatilité BTC">
+              <div class="project-overlay"><span class="overlay-btn">Voir interactif →</span></div>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Rolling Std</span><span>Risk</span></div>
+            <h3>Volatilité Bitcoin (30 jours)</h3>
+            <button class="toggle-code">
+              <i class="fas fa-code"></i> Voir le code Python
+            </button>
+            <div class="code-block">
+<pre><code>data_btc_eth['Volatility_btc'] = \
+  data_btc_eth['Return_btc'].rolling(30).std()
+fig = px.line(data_btc_eth,
+              x=data_btc_eth.index,
+              y="Volatility_btc",
+              title="Volatilité BTC (30j)")
+fig.show()</code></pre>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <h4>Projet 2 : Catégorisation des flux</h4>
-          <p>Clustering (K-Means, EM), Word2Vec + XGBoost → 350 demandes catégorisées / mois.</p>
+
+        <!-- BTC vs ETH -->
+        <div class="project-card crypto-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-img-wrap">
+            <a href="compare_btc_eth.html" target="_blank">
+              <img src="compare_btc_eth.png" alt="BTC vs ETH">
+              <div class="project-overlay"><span class="overlay-btn">Voir interactif →</span></div>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Comparaison</span><span>BTC/ETH</span></div>
+            <h3>Comparaison BTC vs ETH</h3>
+            <button class="toggle-code">
+              <i class="fas fa-code"></i> Voir le code Python
+            </button>
+            <div class="code-block">
+<pre><code>cols = ['Close_btc','Close_eth']
+data_norm = data_btc_eth[cols] / \
+            data_btc_eth[cols].iloc[0]
+fig = px.line(data_norm,
+              x=data_btc_eth.index,
+              y=cols,
+              title="BTC vs ETH (normalisé)")
+fig.show()</code></pre>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <h4>Projet 3 : Analyse & reporting</h4>
-          <p>SQL, Talend, VBA, Power BI : automatisation du suivi des commandes & KPIs marketing.</p>
-        </div>
+
+      </div><!-- /crypto grid -->
+    </div><!-- /section-inner -->
+  </section>
+
+  <!-- ══════════════════════════════════════
+       EXPÉRIENCES
+  ══════════════════════════════════════ -->
+  <section class="experience" id="experience">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Parcours</p>
+        <h2>Expériences professionnelles</h2>
       </div>
 
-      <!-- Aix-Marseille -->
-      <div class="experience-item">
-        <span class="timeline-point"></span>
-        <img src="aix-marseille-universite.webp" alt="AMU">
-        <h3>Stagiaire Data Scientist | Aix-Marseille Université</h3>
-        <p class="period">(Avril - Juin 2023)</p>
-        <div class="project-card">
-        <h4>Modélisation des durées de traitement des dossiers d’assurance avec Python.</h4>
-        
-          <p>Préparation & nettoyage des données (pandas, NumPy, Seaborn).</p>
-          <p>Modèles GLM, Gradient Boosting, Random Forests pour la prédiction.</p>
-        
+      <div class="timeline">
+
+        <!-- Orange -->
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-logo">
+                <img src="Orange.webp" alt="Orange">
+              </div>
+              <div class="timeline-meta">
+                <h3>Analyste BI</h3>
+                <span class="company">Orange – Toulon</span>
+                <span class="period">2023 – 2024</span>
+              </div>
+            </div>
+            <div class="timeline-projects">
+              <div class="tl-project">
+                <span class="tl-project-tag">Automatisation</span>
+                <p>Script Python (Selenium, Pandas, Tkinter) pour traiter <strong>130 fichiers</strong> et les distribuer via SharePoint — sans intervention manuelle.</p>
+              </div>
+              <div class="tl-project">
+                <span class="tl-project-tag">NLP / ML</span>
+                <p>Clustering + Word2Vec + XGBoost → catégorisation automatique de <strong>350 demandes/mois</strong>.</p>
+              </div>
+              <div class="tl-project">
+                <span class="tl-project-tag">BI & Reporting</span>
+                <p>SQL, Talend, VBA, Power BI : automatisation du suivi des commandes et des KPIs marketing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AMU -->
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-logo">
+                <img src="aix-marseille-universite.webp" alt="Aix-Marseille Université">
+              </div>
+              <div class="timeline-meta">
+                <h3>Stagiaire Data Scientist</h3>
+                <span class="company">Aix-Marseille Université</span>
+                <span class="period">Avril – Juin 2023</span>
+              </div>
+            </div>
+            <div class="timeline-projects">
+              <div class="tl-project">
+                <span class="tl-project-tag">Modélisation</span>
+                <p>Prédiction des durées de traitement des dossiers d'assurance : GLM, Gradient Boosting, Random Forest avec pandas, NumPy et Seaborn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       COMPÉTENCES
+  ══════════════════════════════════════ -->
+  <section class="skills" id="competences">
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Stack technique</p>
+        <h2>Compétences</h2>
       </div>
-       </div>
-    </div>
-  </div>
-</section>
 
-<!-- Skill Section -->
-<section class="competences" id="competences">
-    <div class="title">
-        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Compétences</h2>
-    </div>
-    <div class="content">
-        <div class="column col-left">
-            <h2 class="content-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">Mes compétences</h2>
-            <div class="paragraph-text" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="300">
-                En tant que data scientist, j’ai développé un ensemble de compétences techniques solides pour 
-                analyser, traiter et valoriser les données. J’ai également acquis des compétences en modélisation, 
-                visualisation et communication des résultats auprès des équipes métier.
+      <div class="skills-grid">
+
+        <!-- Colonne 1 -->
+        <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+          <h3><i class="fas fa-code"></i> Langages & Data</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Python (Pandas, NumPy, Scikit-learn)</span>
+              <span class="skill-level advanced">Avancé</span>
             </div>
-            <a href="#" class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">Voir plus</a>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>SQL (PostgreSQL, SQL Server)</span>
+              <span class="skill-level advanced">Avancé</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>R (ggplot2, analyse statistique)</span>
+              <span class="skill-level intermediate">Intermédiaire</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+          </div>
         </div>
-        <div class="column col-right">
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100">
-                    <span>Python (Pandas, NumPy, Scikit-learn, Matplotlib)</span>
-                    <span>90%</span>
-                </div>
-                <div class="line html" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="140"></div>
+
+        <!-- Colonne 2 -->
+        <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+          <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Régression, Classification, Clustering</span>
+              <span class="skill-level advanced">Avancé</span>
             </div>
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
-                    <span>SQL (PostgreSQL, SQL Server)</span>
-                    <span>85%</span>
-                </div>
-                <div class="line css" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="240"></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>NLP (Word2Vec, TF-IDF)</span>
+              <span class="skill-level intermediate">Intermédiaire</span>
             </div>
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="300">
-                    <span>R (Analyse statistique, ggplot2)</span>
-                    <span>80%</span>
-                </div>
-                <div class="line javascript" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="340"></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Deep Learning (CNN, notions)</span>
+              <span class="skill-level notions">Notions</span>
             </div>
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
-                    <span>Machine Learning (Régression, Classification, Clustering)</span>
-                    <span>85%</span>
-                </div>
-                <div class="line python" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440"></div>
-            </div>
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500">
-                    <span>Data Visualisation (Looker Studio, Power BI, Matplotlib, Seaborn, plotly)</span>
-                    <span>80%</span>
-                </div>
-                <div class="line php" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="540"></div>
-            </div>
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="600">
-                    <span>Big Data (Talend,Snowflake, Spark - notions)</span>
-                    <span>65%</span>
-                </div>
-                <div class="line php" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="640"></div>
-            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
+          </div>
         </div>
+
+        <!-- Colonne 3 -->
+        <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+          <h3><i class="fas fa-chart-bar"></i> BI & Outils</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Power BI / Looker Studio</span>
+              <span class="skill-level advanced">Avancé</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Plotly, Seaborn, Matplotlib</span>
+              <span class="skill-level advanced">Avancé</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Snowflake / Talend / Spark</span>
+              <span class="skill-level intermediate">Intermédiaire</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+          </div>
+        </div>
+
+      </div>
     </div>
-</section>
-    </section>
-    
+  </section>
 
-
-  <!--teste-->
-  <!-- Contact Section -->
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
   <section class="contact" id="contact">
-  <div class="title reveal">
-    <h2 class="section-title">Contact Me</h2>
-  </div>
-  <div class="content">
-    <div class="row">
-      <div class="card reveal">
-        <div class="contact-icon">
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <div class="info">
-          <h3>Address</h3>
-          <span>Marseille, France</span>
-        </div>
+    <div class="section-inner">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Travaillons ensemble</p>
+        <h2>Me contacter</h2>
+        <p class="section-desc">Disponible pour des opportunités en Data Analyse, Business Intelligence ou Data Science.</p>
       </div>
-      <div class="card reveal">
-        <div class="contact-icon">
-          <i class="fas fa-phone"></i>
+
+      <div class="contact-grid">
+
+        <!-- Infos -->
+        <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <strong>Localisation</strong>
+              <span>Marseille, France</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <strong>Téléphone</strong>
+              <span>+33 6 25 54 16 73</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <span>baa418232@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/adama-abdoul-ba-a292321b0" target="_blank">Voir le profil</a>
+            </div>
+          </div>
         </div>
-        <div class="info">
-          <h3>Phone</h3>
-          <span>+33 6 25 54 16 73</span>
+
+        <!-- Formulaire -->
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="200">
+          <div id="successMessage" class="success-msg" style="display:none;">
+            ✅ Message envoyé avec succès !
+          </div>
+          <form action="https://formsubmit.co/adamaabdoul1.ba@gmail.com" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="Nom" placeholder="Votre nom" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" placeholder="votre@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="Message" rows="6" placeholder="Votre message..." required></textarea>
+            </div>
+            <input type="hidden" name="_next" value="https://adamaabdoul.github.io/Mon_portfolio/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Envoyer le message
+            </button>
+          </form>
         </div>
-      </div>
-      <div class="card reveal">
-        <div class="contact-icon">
-          <i class="fas fa-envelope"></i>
-        </div>
-        <div class="info">
-          <h3>Email Address</h3>
-          <span>baa418232@gmail.com</span>
-        </div>
+
       </div>
     </div>
-<!--teste-->
-      <div id="successMessage" style="display:none; color:green; margin-bottom:10px;">
-  ✅ Message envoyé !
-</div>
+  </section>
 
-      <!--teste-->
-    <!-- Formulaire fonctionnel -->
-    <div class="row">
-      <div class="contact-form reveal">
-        <h3>Send Message</h3>
-        <form action="https://formsubmit.co/adamaabdoul1.ba@gmail.com" method="POST">
-          <div class="input-box">
-            <input type="text" name="Nom" placeholder="Name" required>
-          </div>
-          <div class="input-box">
-            <input type="email" name="Email" placeholder="Email" required>
-          </div>
-          <div class="input-box">
-            <textarea name="Message" rows="8" cols="80" placeholder="Message" required></textarea>
-          </div>
-
-          <!-- Redirection après envoi -->
-          <input type="hidden" name="_next" value="https://adamaabdoul.github.io/Mon_portfolio/thankyou.html">
-          <!-- Protection anti-spam -->
-          <input type="hidden" name="_captcha" value="false">
-
-          <div class="input-box">
-            <input type="submit" class="send-btn" value="Send">
-          </div>
-        </form>
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">Adama<span>.</span></span>
+        <p>Data Analyst · Marseille</p>
+      </div>
+      <div class="footer-links">
+        <a href="#apropos">À propos</a>
+        <a href="#services">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+        <a href="cv_ba_adama.pdf" target="_blank">CV</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/adama-abdoul-ba-a292321b0" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+    <div class="footer-bottom">
+      <p>© 2025 Adama BA — Tous droits réservés</p>
+    </div>
+  </footer>
 
-  <!--teste-->
-      <footer class="footer">
-    <span class="footer-title">BA - Data Scientist</span>
-    <p>© 2025 | Réalisé avec passion en Data Science | <a href="#contact">Me contacter</a></p>
-</footer>
+  <!-- ══════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════ -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0, once: true });
+  </script>
 
+  <script>
+    /* ─── Header sticky ─── */
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    });
 
+    /* ─── Menu burger ─── */
+    const menuBtn = document.querySelector('.menu-btn');
+    const navigation = document.querySelector('.navigation');
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({offset:0});
-    </script>
-    <script>
+    menuBtn.addEventListener('click', () => {
+      const isOpen = menuBtn.classList.toggle('active');
+      navigation.classList.toggle('active');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+    });
 
-        window.addEventListener("scroll", function(){
-    scrollBtn.classList.toggle("active", window.scrollY > 500);
-});
+    /* Fermer le menu au clic sur un lien */
+    document.querySelectorAll('.navigation a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        navigation.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', false);
+      });
+    });
 
-//javascript for scroll back to top on click scroll-to-top button
+    /* ─── Toggle code Python ─── */
+    document.querySelectorAll('.toggle-code').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const block = btn.nextElementSibling;
+        const isOpen = block.classList.toggle('open');
+        btn.innerHTML = isOpen
+          ? '<i class="fas fa-times"></i> Masquer le code'
+          : '<i class="fas fa-code"></i> Voir le code Python';
+      });
+    });
 
-// document.querySelector(".scrollToTop-btn").addEventListener("click", () => {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// });
+    /* ─── Message succès formulaire ─── */
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+      const msg = document.getElementById('successMessage');
+      if (msg) msg.style.display = 'block';
+    }
 
-        const menuBtn = document.querySelector(".menu-btn");
-        const navigation = document.querySelector(".navigation");
-        const navigationItems = document.querySelector(".navigation a");
+    /* ─── Active nav link on scroll ─── */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navigation a[href^="#"]');
 
-        menuBtn.addEventListener("click", () => {
-            menuBtn.classList.toggle("active");
-            navigation.classList.toggle("active");
-        })
-
-        // Navigation Effects
-        window.addEventListener("scroll", function(){
-            const header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-
-        navigationItems.forEach((navigationItem) => {
-            navigationItem.addEventListener("click", () => {
-                menuBtn.classList.remove("active");
-                navigation.classList.remove("active")
-            })
-        })
-
-
-
-    </script>
-    <script>
-  const params = new URLSearchParams(window.location.search);
-  if(params.get('success') === 'true'){
-    const msg = document.getElementById('successMessage');
-    if(msg) msg.style.display = 'block';
-  }
-</script>
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+      });
+    });
+  </script>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
